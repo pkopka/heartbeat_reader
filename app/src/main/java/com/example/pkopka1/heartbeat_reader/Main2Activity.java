@@ -18,7 +18,7 @@ public class Main2Activity extends AppCompatActivity {
         String bmp2 = intent.getStringExtra("bpm"); //if it's a string you stored.
         Log.d("beats", "bmp: " + bmp2);
         TextView result = (TextView)findViewById(R.id.textView3);
-        result.setText("bmp : "+bmp2);
+        result.setText("Rytm Twojego serca : "+bmp2+" bmp ");
 
         Button yourButton = (Button) findViewById(R.id.button);
 
@@ -27,6 +27,15 @@ public class Main2Activity extends AppCompatActivity {
                 startActivity(new Intent(Main2Activity.this, MainActivity.class));
             }
         });
+
+        Button btn1 = (Button) findViewById(R.id.button2);
+        btn1.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                finish();
+                System.exit(0);;
+            }
+        });
+
 
     }
 }
